@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nico Labs | Software studio in Galle, Sri Lanka</title>
+    <meta name="description" content="Nico Labs builds booking systems, dashboards, online stores and websites for businesses in Sri Lanka. Book a free call.">
+    <meta name="theme-color" content="#07060B">
+
+    <meta property="og:title" content="Nico Labs | Software that runs your business">
+    <meta property="og:description" content="Booking systems, dashboards, online stores and websites. Built in Galle, live in weeks.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/hirun.jpg">
+
+    <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+    <div class="grid-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <canvas id="dust" aria-hidden="true"></canvas>
+
+    <header class="nav" id="top">
+        <div class="nav-inner">
+            <div class="pill pill-left">
+                <a href="#top" class="brand" aria-label="Nico Labs home">
+                    <img src="assets/mark.svg" alt="" width="28" height="28">
+                    <span>Nico Labs</span>
+                </a>
+                <nav class="nav-links" aria-label="Main">
+                    <a href="#demo">Demo</a>
+                    <a href="#work">Work</a>
+                    <a href="#services">Services</a>
+                    <a href="#process">Process</a>
+                    <a href="#about">About</a>
+                </nav>
+            </div>
+            <div class="nav-right">
+                <a href="#contact" class="pill pill-cta">
+                    <span>Book a call</span>
+                    <i aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>
+                    </i>
+                </a>
+                <button class="pill menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+                    <span class="burger" aria-hidden="true"><i></i><i></i></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+        <nav aria-label="Mobile">
+            <a href="#demo"><span>01</span>Try the demo</a>
+            <a href="#work"><span>02</span>Work</a>
+            <a href="#services"><span>03</span>Services</a>
+            <a href="#process"><span>04</span>Process</a>
+            <a href="#about"><span>05</span>About</a>
+            <a href="#contact"><span>06</span>Book a call</a>
+        </nav>
+        <p>+94 76 808 8170 · Galle, Sri Lanka</p>
+    </div>
+
+    <main id="main">
+
+        <!-- HERO -->
+        <section class="hero">
+            <p class="hero-kicker">Software studio · Galle, Sri Lanka</p>
+
+            <h1 class="hero-title">
+                <span class="wordmark chrome" id="wordmark">Nico Labs</span>
+                <span class="ghost">software that runs your <span class="swap" id="swapWord" aria-hidden="true">business</span><span class="sr-only">business</span></span>
+            </h1>
+
+            <div class="orb-wrap">
+                <div class="orb-halo" aria-hidden="true"></div>
+                <svg id="orb" viewBox="-300 -300 600 600" tabindex="0" role="img" aria-label="Hextech orb. Drag it, or use the arrow keys, to spin it. Press Enter to make sparks."></svg>
+                <p class="orb-hint" aria-hidden="true"><span class="hint-fine">Drag to spin · click for sparks</span><span class="hint-touch">Swipe to spin · tap for sparks</span></p>
+            </div>
+
+            <div class="hero-foot">
+                <div class="hero-left">
+                    <p class="hero-lead">We build booking systems, dashboards, online stores and websites for businesses still running on phone calls and notebooks. Real tools, live in weeks.</p>
+                    <div class="chips-row">
+                        <span class="chip">Booking systems</span>
+                        <span class="chip">Dashboards</span>
+                        <span class="chip">Websites</span>
+                    </div>
+                    <div class="hero-ctas">
+                        <a href="#contact" class="btn btn-chrome">Book a free 15-min call</a>
+                        <a href="#work" class="btn-play">See our work <span aria-hidden="true">▸</span></a>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-box"><b data-count="400">400+</b><span>players on a system<br>we built</span></div>
+                    <div class="stat-box"><b data-count="780">780+</b><span>sessions booked<br>&amp; billed</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARTNERS -->
+        <section class="partners" aria-label="Who we've built for">
+            <p class="micro">Built for</p>
+            <div class="partner-row">
+                <span>ADOX Gaming</span>
+                <span>Goodstuff XPC</span>
+                <span>Villa Management SL</span>
+                <span>Saltlyne Label</span>
+                <span>Run For Coffee</span>
+                <span>Keepsake Weddings</span>
+            </div>
+        </section>
+
+        <!-- STATEMENT -->
+        <section class="statement">
+            <p class="statement-text" id="statement">We turn phone calls, notebooks and spreadsheets into software that runs itself — from bookings and billing to dashboards, stores and everything in between.</p>
+        </section>
+
+        <!-- DEMO -->
+        <section class="section demo" id="demo">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="micro reveal">00 — Try it yourself</p>
+                    <h2 class="reveal">Book a court. <span class="chrome">Watch it land.</span></h2>
+                    <p class="section-lead reveal">This is how our booking systems work. Pick a free slot as a player, then see what the owner sees. It's a demo, so nothing is really booked.</p>
+                </div>
+
+                <div class="demo-grid reveal">
+                    <!-- Player view -->
+                    <div class="phone" aria-label="Player view">
+                        <div class="phone-notch" aria-hidden="true"></div>
+                        <div class="phone-screen">
+                            <div class="phone-top">
+                                <div>
+                                    <p class="demo-kicker">Player view</p>
+                                    <h3>Galle Futsal Arena</h3>
+                                </div>
+                                <span class="price-tag">Rs. 4,000 / h</span>
+                            </div>
+
+                            <div class="day-tabs" role="group" aria-label="Choose a day" id="dayTabs"></div>
+
+                            <div class="slot-table" id="slotTable" role="group" aria-label="Available times"></div>
+
+                            <div class="demo-summary" id="demoSummary" aria-live="polite">Pick a free time to book.</div>
+                            <button type="button" class="wa-book" id="bookBtn" disabled>
+                                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+                                Book on WhatsApp
+                            </button>
+
+                            <div class="chat" id="chat" hidden>
+                                <div class="chat-head">
+                                    <span class="chat-avatar" aria-hidden="true">GF</span>
+                                    <div><b>Galle Futsal Arena</b><small>online</small></div>
+                                </div>
+                                <div class="chat-body" id="chatBody" aria-live="polite"></div>
+                                <button type="button" class="chat-again" id="chatAgain">Book another slot</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Connection beam -->
+                    <div class="beam" aria-hidden="true"><i id="beamDot"></i></div>
+
+                    <!-- Owner view -->
+                    <div class="owner" aria-label="Owner dashboard">
+                        <div class="owner-head">
+                            <div>
+                                <p class="demo-kicker">Owner view</p>
+                                <h3>Dashboard</h3>
+                            </div>
+                            <span class="live-tag"><i class="live"></i>Live</span>
+                        </div>
+                        <div class="kpis">
+                            <div class="kpi"><span>Bookings this week</span><b id="kpiBookings">0</b></div>
+                            <div class="kpi"><span>Revenue this week</span><b id="kpiRevenue">Rs. 0</b></div>
+                            <div class="kpi"><span>Courts busy</span><b id="kpiBusy">0%</b></div>
+                        </div>
+                        <div class="week-chart" id="weekChart" aria-hidden="true"></div>
+                        <div class="feed">
+                            <p class="feed-title">Latest bookings</p>
+                            <ul id="feed"></ul>
+                        </div>
+                        <p class="sr-only" id="ownerLive" aria-live="polite"></p>
+                    </div>
+                </div>
+
+                <div class="demo-cta reveal">
+                    <p>Want this for your venue, studio or café?</p>
+                    <a href="#contact" class="btn btn-chrome" data-need="Booking system">Get a booking system</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK -->
+        <section class="section" id="work">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="micro reveal">01 — Selected work</p>
+                    <h2 class="reveal">Things we've <span class="chrome">shipped</span></h2>
+                    <p class="section-lead reveal">Not mockups. Each of these is a working product that a real business, team or crowd has used.</p>
+                </div>
+
+                <div class="filters reveal" role="group" aria-label="Filter projects">
+                    <button type="button" class="filter" aria-pressed="true" data-filter="all">All <span>7</span></button>
+                    <button type="button" class="filter" aria-pressed="false" data-filter="booking">Booking <span>2</span></button>
+                    <button type="button" class="filter" aria-pressed="false" data-filter="ops">Dashboards <span>2</span></button>
+                    <button type="button" class="filter" aria-pressed="false" data-filter="commerce">Commerce <span>2</span></button>
+                    <button type="button" class="filter" aria-pressed="false" data-filter="creative">Creative tech <span>1</span></button>
+                </div>
+                <p class="sr-only" id="filterStatus" aria-live="polite"></p>
+
+                <div class="cases">
+
+                    <article class="case reveal" data-cat="booking" style="--glow: var(--cyan)">
+                        <div class="case-info">
+                            <span class="case-num" aria-hidden="true">01</span>
+                            <p class="tag">Booking &amp; billing system</p>
+                            <h3>ADOX Gaming</h3>
+                            <p class="desc">The system that runs a gaming café day to day. Players see which stations are free, book on WhatsApp and carry a QR player ID. Staff check them in, time each session and bill it automatically.</p>
+                            <ul class="metrics">
+                                <li><b>400+</b><span>registered players</span></li>
+                                <li><b>780+</b><span>sessions billed</span></li>
+                            </ul>
+                            <p class="stack">React · Firebase · QR scanning</p>
+                            <a class="link" href="https://www.adoxgaming.com/" target="_blank" rel="noopener">adoxgaming.com ↗</a>
+                        </div>
+                        <div class="case-visual">
+                            <div class="mock">
+                                <div class="mock-head"><b>Stations</b><span class="live-tag"><i class="live"></i>Live</span></div>
+                                <div class="station-grid">
+                                    <span class="st on">PC 01<small>Free</small></span>
+                                    <span class="st">PC 02<small>42 min</small></span>
+                                    <span class="st">PC 03<small>1 h 10</small></span>
+                                    <span class="st on">PC 04<small>Free</small></span>
+                                    <span class="st">PS5 A<small>18 min</small></span>
+                                    <span class="st on">PS5 B<small>Free</small></span>
+                                </div>
+                                <div class="qr-id">
+                                    <svg class="qr" viewBox="0 0 21 21" aria-hidden="true"><path fill="currentColor" d="M0 0h7v7H0zM1 1v5h5V1zM2 2h3v3H2zM14 0h7v7h-7zm1 1v5h5V1zm1 1h3v3h-3zM0 14h7v7H0zm1 1v5h5v-5zm1 1h3v3H2zM8 0h2v2H8zm3 1h2v3h-2zM8 3h2v2H8zm0 4h3v2H8zm4-1h1v3h-1zM0 8h2v2H0zm3 0h3v1H3zm11 0h3v2h-3zm4 1h3v2h-3zM8 10h2v3H8zm3 1h4v2h-4zm6 1h2v2h-2zm-9 3h3v1H8zm4 0h2v3h-2zm3 1h3v2h-3zm4 0h2v5h-2zM8 18h3v3H8zm6 1h3v2h-3z"/></svg>
+                                    <div><b>Player ID</b><span>Scan at the desk</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case reveal" data-cat="ops" style="--glow: var(--gold)">
+                        <div class="case-info">
+                            <span class="case-num" aria-hidden="true">02</span>
+                            <p class="tag">Operations platform</p>
+                            <h3>Villa Management Sri Lanka</h3>
+                            <p class="desc">An office dashboard plus a staff phone app. Every task across every villa is assigned, tracked and never forgotten. Staff clock in with GPS, tick off checklists and report issues, even offline.</p>
+                            <p class="stack">React · Firebase · Offline PWA</p>
+                        </div>
+                        <div class="case-visual">
+                            <div class="mock">
+                                <div class="mock-head"><b>Villa Sunset</b><span class="pill-tag warn">3 tasks due</span></div>
+                                <div class="task done"><i></i>Pool clean <span>Ravi</span></div>
+                                <div class="task"><i></i>Changeover · 2 PM <span>Nimali</span></div>
+                                <div class="task urgent"><i></i>AC leak reported <span>Urgent</span></div>
+                                <div class="clock"><i class="live"></i>Clocked in · GPS verified</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case reveal" data-cat="commerce" style="--glow: var(--pink)">
+                        <div class="case-info">
+                            <span class="case-num" aria-hidden="true">03</span>
+                            <p class="tag">Marketplace platform</p>
+                            <h3>Experience Gifting</h3>
+                            <p class="desc">Buy an experience, personalise it and send it as a gift. Partner venues scan the QR to redeem, and the admin side tracks orders and vendor settlements.</p>
+                            <p class="stack">React · Firebase · Payments</p>
+                        </div>
+                        <div class="case-visual">
+                            <div class="mock mock-gift">
+                                <div class="gift-card">
+                                    <span>A gift for you</span>
+                                    <b>Sunset kayak, Galle</b>
+                                    <small>From Amaya ♥</small>
+                                </div>
+                                <svg class="qr big" viewBox="0 0 21 21" aria-hidden="true"><path fill="currentColor" d="M0 0h7v7H0zM1 1v5h5V1zM2 2h3v3H2zM14 0h7v7h-7zm1 1v5h5V1zm1 1h3v3h-3zM0 14h7v7H0zm1 1v5h5v-5zm1 1h3v3H2zM8 0h2v2H8zm3 1h2v3h-2zM8 3h2v2H8zm0 4h3v2H8zm4-1h1v3h-1zM0 8h2v2H0zm3 0h3v1H3zm11 0h3v2h-3zm4 1h3v2h-3zM8 10h2v3H8zm3 1h4v2h-4zm6 1h2v2h-2zm-9 3h3v1H8zm4 0h2v3h-2zm3 1h3v2h-3zm4 0h2v5h-2zM8 18h3v3H8zm6 1h3v2h-3z"/></svg>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case reveal" data-cat="commerce" style="--glow: var(--violet)">
+                        <div class="case-info">
+                            <span class="case-num" aria-hidden="true">04</span>
+                            <p class="tag">Online store</p>
+                            <h3>Saltlyne Label</h3>
+                            <p class="desc">A full fashion storefront with cart, checkout, customer accounts, order tracking and a loyalty programme. The owner edits products, coupons and every homepage section from a private admin desk.</p>
+                            <p class="stack">React · Node.js</p>
+                        </div>
+                        <div class="case-visual">
+                            <div class="mock mock-store">
+                                <div class="prod"><i></i><b>Linen shirt</b><span>$48</span></div>
+                                <div class="prod"><i></i><b>Wave tote</b><span>$22</span></div>
+                                <div class="prod"><i></i><b>Sun hat</b><span>$30</span></div>
+                                <div class="cart">Cart · 2 items <b>+70 pts</b></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case reveal" data-cat="booking" style="--glow: var(--cyan)">
+                        <div class="case-info">
+                            <span class="case-num" aria-hidden="true">05</span>
+                            <p class="tag">Live event tool</p>
+                            <h3>MySpot</h3>
+                            <p class="desc">Seat picking for a sold-out gig. Ticket holders scan a QR, register their ticket and pick a seat that updates live for everyone. No two people can ever hold the same seat.</p>
+                            <p class="stack">React · Firebase Realtime DB</p>
+                        </div>
+                        <div class="case-visual">
+                            <div class="mock mock-seats">
+                                <div class="stage">Stage</div>
+                                <div class="seats">
+                                    <i></i><i class="t"></i><i class="t"></i><i></i><i class="t"></i><i></i><i class="t"></i><i></i>
+                                    <i class="t"></i><i></i><i class="me"></i><i class="t"></i><i></i><i class="t"></i><i></i><i class="t"></i>
+                                    <i></i><i class="t"></i><i></i><i></i><i class="t"></i><i class="t"></i><i></i><i></i>
+                                </div>
+                                <span class="seat-note">Row B · Seat 3 is yours</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case reveal" data-cat="ops" style="--glow: var(--gold)">
+                        <div class="case-info">
+                            <span class="case-num" aria-hidden="true">06</span>
+                            <p class="tag">Website + team dashboard</p>
+                            <h3>Goodstuff XPC</h3>
+                            <p class="desc">A brand website for an experience company, plus the internal dashboard the team runs on: role-based logins, daily clock-in and to-dos that flow up the chain of command for review.</p>
+                            <p class="stack">React · Firebase · Push notifications</p>
+                            <a class="link" href="https://www.gobigonexperiences.com/" target="_blank" rel="noopener">gobigonexperiences.com ↗</a>
+                        </div>
+                        <div class="case-visual">
+                            <div class="mock">
+                                <div class="mock-head"><b>Today</b><span class="pill-tag ok">Clocked in 9:02</span></div>
+                                <div class="task"><i></i>Shoot shot list <span>Review</span></div>
+                                <div class="task done"><i></i>Client deck v2 <span>Done</span></div>
+                                <div class="task"><i></i>Venue recce <span>Intern</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case reveal" data-cat="creative" style="--glow: var(--pink)">
+                        <div class="case-info">
+                            <span class="case-num" aria-hidden="true">07</span>
+                            <p class="tag">Desktop app</p>
+                            <h3>VisualEngine</h3>
+                            <p class="desc">Live, audio-reactive visuals sent straight into Resolume Arena for concerts and DJ sets. Blob tracking, 3D fly-throughs, GPU particles and DJ logo effects, all controllable from a MIDI knob.</p>
+                            <p class="stack">Electron · WebGL · Spout / Syphon</p>
+                        </div>
+                        <div class="case-visual">
+                            <div class="mock mock-ve">
+                                <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                                <span>22 effects · audio reactive · MIDI</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="more-work reveal">
+                    <p class="micro">More builds</p>
+                    <ul>
+                        <li><a href="https://run4coffee.com/" target="_blank" rel="noopener"><b>Run For Coffee</b><span>Community event website</span><i>↗</i></a></li>
+                        <li><a href="https://hirund.github.io/Keepsake_Weddings/" target="_blank" rel="noopener"><b>Keepsake Weddings</b><span>Wedding studio portfolio</span><i>↗</i></a></li>
+                        <li><a href="https://kidscardgame.netlify.app/" target="_blank" rel="noopener"><b>Kids Card Game</b><span>Interactive web game</span><i>↗</i></a></li>
+                        <li><div><b>Footage Tagger</b><span>On-device AI that tags and searches shoot footage</span></div></li>
+                        <li><div><b>Resolve × Claude</b><span>AI control of DaVinci Resolve over MCP</span></div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="section" id="services">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="micro reveal">02 — What we build</p>
+                    <h2 class="reveal">If it's slowing you down, <span class="chrome">we can build it</span></h2>
+                </div>
+                <div class="service-grid">
+                    <div class="service reveal"><span class="hex">01</span><h3>Booking systems</h3><p>Courts, studios, rooms, tables, stations. Customers see what's free and book in three taps. You get fewer missed calls and no double bookings.</p><a class="service-link" href="#contact" data-need="Booking system">Ask about this <span aria-hidden="true">→</span></a></div>
+                    <div class="service reveal"><span class="hex">02</span><h3>Business dashboards</h3><p>Staff logins, tasks, attendance, sales and reports in one place. Swap the notebook for numbers you can actually learn from.</p><a class="service-link" href="#contact" data-need="Dashboard">Ask about this <span aria-hidden="true">→</span></a></div>
+                    <div class="service reveal"><span class="hex">03</span><h3>Online stores</h3><p>Product catalogue, cart, checkout, customer accounts and loyalty points, with an admin you can run yourself.</p><a class="service-link" href="#contact" data-need="Online store">Ask about this <span aria-hidden="true">→</span></a></div>
+                    <div class="service reveal"><span class="hex">04</span><h3>Websites</h3><p>Fast, good-looking sites that turn visitors into WhatsApp messages and calls. Built mobile first, because that's where your customers are.</p><a class="service-link" href="#contact" data-need="Website">Ask about this <span aria-hidden="true">→</span></a></div>
+                    <div class="service reveal"><span class="hex">05</span><h3>Event &amp; ticketing tools</h3><p>QR tickets, live seat maps, check-in scanners and registration flows for gigs, festivals and school events.</p><a class="service-link" href="#contact" data-need="Event / ticketing">Ask about this <span aria-hidden="true">→</span></a></div>
+                    <div class="service reveal"><span class="hex">06</span><h3>AI &amp; automation</h3><p>Custom tools that save hours: auto-tagging media, WhatsApp reminders, scheduled reports and AI built into the software you already use.</p><a class="service-link" href="#contact" data-need="Not sure yet">Ask about this <span aria-hidden="true">→</span></a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="section" id="process">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="micro reveal">03 — How it works</p>
+                    <h2 class="reveal">From a call to live, <span class="chrome">fast</span></h2>
+                </div>
+                <ol class="steps">
+                    <li class="reveal"><span class="node"></span><span class="step-num" aria-hidden="true">01</span><h3>Free call</h3><p>15 minutes. Tell us how you work today and what's getting in the way.</p></li>
+                    <li class="reveal"><span class="node"></span><span class="step-num" aria-hidden="true">02</span><h3>Clear proposal</h3><p>What we'll build, a fixed price and a date. No surprises later.</p></li>
+                    <li class="reveal"><span class="node"></span><span class="step-num" aria-hidden="true">03</span><h3>Build &amp; train</h3><p>You see progress every week. We set it up and train your staff on site.</p></li>
+                    <li class="reveal"><span class="node lit"></span><span class="step-num chrome" aria-hidden="true">04</span><h3>Go live</h3><p>Launch, then ongoing support on WhatsApp whenever you need it.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="wrap about-grid">
+                <figure class="portrait reveal">
+                    <div class="portrait-frame">
+                        <img src="assets/hirun.jpg" alt="Portrait of Hirun Dilshan Wickramasinghe, founder of Nico Labs" width="900" height="900" loading="lazy">
+                    </div>
+                    <figcaption><span>Hirun D. Wickramasinghe</span><span>Founder</span></figcaption>
+                </figure>
+                <div class="about-copy">
+                    <p class="micro reveal">04 — The founder</p>
+                    <h2 class="reveal">Hi, I'm <span class="chrome">Hirun</span></h2>
+                    <p class="section-lead reveal">I'm Hirun Dilshan Wickramasinghe, a developer and creative technologist from Galle. I started Nico Labs to build the kind of software local businesses actually need, then stick around to keep it running.</p>
+                    <p class="body reveal">Before Nico Labs I built websites, motion graphics, 3D previz and live LED visuals for events, brands and music videos. That's why our software doesn't just work: it looks good and feels easy for your customers.</p>
+
+                    <div class="timeline reveal">
+                        <div class="now"><span>Now</span><b>Founder</b><span>Nico Labs</span></div>
+                        <div><span>2025 –</span><b>Creative Technologist</b><span>Fern (Events)</span></div>
+                        <div><span>2025 –</span><b>Video Editor</b><span>Realtalk Media</span></div>
+                        <div><span>2022 –</span><b>Web &amp; Motion</b><span>Richmond Live</span></div>
+                        <div><span>2022 –</span><b>Main Video Editor</b><span>Binaru Productions</span></div>
+                    </div>
+
+                    <div class="chips-row reveal">
+                        <span class="chip">React</span><span class="chip">Firebase</span><span class="chip">Node.js</span><span class="chip">Electron</span><span class="chip">WebGL</span><span class="chip">UI / UX</span><span class="chip">Motion</span><span class="chip">3D</span><span class="chip">AI tools</span>
+                    </div>
+
+                    <div class="socials reveal">
+                        <a href="https://github.com/HirunD" target="_blank" rel="noopener">GitHub ↗</a>
+                        <a href="https://www.instagram.com/_hirund/" target="_blank" rel="noopener">Instagram ↗</a>
+                        <a href="mailto:hirundwickramasinghe@gmail.com">Email ↗</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section contact" id="contact">
+            <div class="contact-glow" aria-hidden="true"></div>
+            <div class="wrap contact-grid">
+                <div class="contact-copy">
+                    <p class="micro reveal">05 — Let's talk</p>
+                    <h2 class="reveal">Book a free <span class="chrome">15-minute call</span></h2>
+                    <p class="section-lead reveal">Tell us a little about your business and when suits you. We'll call you back, usually the same day.</p>
+
+                    <div class="direct reveal">
+                        <a class="direct-item" href="tel:+94768088170"><span>Call now</span><b>+94 76 808 8170</b><i aria-hidden="true">→</i></a>
+                        <a class="direct-item" href="https://wa.me/94768088170?text=Hi%20Nico%20Labs!%20I'd%20like%20to%20book%20a%20call." target="_blank" rel="noopener"><span>WhatsApp</span><b>Message us</b><i aria-hidden="true">→</i></a>
+                        <a class="direct-item" href="mailto:hirundwickramasinghe@gmail.com?subject=Nico%20Labs%20-%20Call%20request"><span>Email</span><b>hirundwickramasinghe@gmail.com</b><i aria-hidden="true">→</i></a>
+                    </div>
+                </div>
+
+                <form class="call-form reveal" id="callForm" novalidate>
+                    <h3>Request a call back</h3>
+                    <div class="field">
+                        <label for="f-name">Your name</label>
+                        <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="e.g. Kasun Perera">
+                    </div>
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="f-phone">Phone / WhatsApp</label>
+                            <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="07X XXX XXXX">
+                        </div>
+                        <div class="field">
+                            <label for="f-biz">Business</label>
+                            <input id="f-biz" name="business" type="text" autocomplete="organization" placeholder="e.g. Galle Futsal Club">
+                        </div>
+                    </div>
+                    <fieldset class="field">
+                        <legend>What do you need?</legend>
+                        <div class="choice">
+                            <label><input type="checkbox" name="need" value="Booking system"><span>Booking system</span></label>
+                            <label><input type="checkbox" name="need" value="Dashboard"><span>Dashboard</span></label>
+                            <label><input type="checkbox" name="need" value="Online store"><span>Online store</span></label>
+                            <label><input type="checkbox" name="need" value="Website"><span>Website</span></label>
+                            <label><input type="checkbox" name="need" value="Event / ticketing"><span>Event / ticketing</span></label>
+                            <label><input type="checkbox" name="need" value="Not sure yet"><span>Not sure yet</span></label>
+                        </div>
+                    </fieldset>
+                    <div class="field">
+                        <label for="f-time">Best time to call</label>
+                        <select id="f-time" name="time">
+                            <option>Any time</option>
+                            <option>Morning (9 AM – 12 PM)</option>
+                            <option>Afternoon (12 – 5 PM)</option>
+                            <option>Evening (5 – 8 PM)</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="f-msg">Anything else? <span class="optional">(optional)</span></label>
+                        <textarea id="f-msg" name="message" rows="3" placeholder="How do you run things today?"></textarea>
+                    </div>
+                    <p class="form-error" id="formError" role="alert"></p>
+                    <button type="submit" class="btn btn-chrome btn-block">Send request on WhatsApp</button>
+                    <p class="form-note">Opens WhatsApp with your details filled in. Just press send.</p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer-mark chrome" aria-hidden="true">Nico Labs</p>
+        <div class="wrap footer-inner">
+            <p>Software studio · Galle, Sri Lanka · © <span id="year">2026</span></p>
+            <div class="footer-links">
+                <a href="https://github.com/HirunD" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.instagram.com/_hirund/" target="_blank" rel="noopener">Instagram</a>
+                <a href="#top">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <a class="fab" href="#contact">Book a call</a>
+
+    <script src="site.js"></script>
+</body>
+</html>
