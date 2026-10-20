@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1200px;height:630px;overflow:hidden;background:#07060B}
+.card{position:relative;width:1200px;height:630px;overflow:hidden;font-family:'Inter Tight',sans-serif;color:#EEEAF6;
+  background:
+    radial-gradient(520px 380px at 88% 18%, rgba(255,138,212,.30), transparent 70%),
+    radial-gradient(560px 420px at 78% 92%, rgba(106,240,255,.24), transparent 70%),
+    radial-gradient(500px 360px at 6% 104%, rgba(155,123,255,.26), transparent 70%),
+    #07060B;}
+.grid{position:absolute;inset:0;background-image:
+  linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:60px 60px;
+  -webkit-mask-image:radial-gradient(900px 520px at 70% 50%,#000 30%,transparent 80%);}
+.mark{position:absolute;right:64px;top:50%;transform:translateY(-50%);width:400px;height:400px;
+  filter:drop-shadow(0 0 40px rgba(255,179,227,.35)) drop-shadow(0 0 90px rgba(106,240,255,.25));}
+.ring{position:absolute;right:20px;top:50%;transform:translateY(-50%);width:530px;height:530px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.08);}
+.ring.r2{right:-40px;width:650px;height:650px;border-color:rgba(255,255,255,.05)}
+.content{position:absolute;left:72px;top:66px;bottom:62px;width:640px;display:flex;flex-direction:column}
+.kicker{display:inline-flex;align-items:center;gap:12px;font-size:19px;letter-spacing:.22em;text-transform:uppercase;color:#CBC5DD;font-weight:500}
+.kicker i{width:9px;height:9px;border-radius:50%;background:#25D366;box-shadow:0 0 14px #25D366}
+.word{margin-top:34px;font-family:'Cinzel',serif;font-weight:600;font-size:104px;line-height:.95;letter-spacing:.02em;
+  background:linear-gradient(180deg,#FFFFFF 0%,#DCDDEE 34%,#A6A2C2 50%,#F1EFFF 58%,#BDB9D9 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+.tag{margin-top:26px;font-size:44px;line-height:1.12;font-weight:500;letter-spacing:-.01em;color:#EEEAF6}
+.tag span{background:linear-gradient(100deg,#FFB3E3 0%,#A9F5FF 45%,#FFF0C2 75%,#C6B5FF 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.chips{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}
+.chip{padding:9px 17px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);
+  font-size:18px;color:#CBC5DD;font-weight:500}
+.foot{margin-top:22px;display:flex;align-items:center;gap:14px;font-size:21px;color:#A29CB8}
+.foot b{color:#EEEAF6;font-weight:600}
+.dot{width:5px;height:5px;border-radius:50%;background:#A29CB8}
+.edge{position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(100deg,#E6ECFF 0%,#FFB3E3 20%,#A9F5FF 42%,#FFF0C2 60%,#C6B5FF 80%,#E6ECFF 100%)}
+</style></head>
+<body><div class="card">
+  <div class="grid"></div>
+  <div class="ring r2"></div><div class="ring"></div>
+  <svg class="mark" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E6ECFF"/><stop offset=".35" stop-color="#FFB3E3"/><stop offset=".65" stop-color="#A9F5FF"/><stop offset="1" stop-color="#FFF0C2"/></linearGradient>
+  <linearGradient id="f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16121F"/><stop offset="1" stop-color="#0A0810"/></linearGradient></defs>
+  <path d="M32 3l25 14.5v29L32 61 7 46.5v-29z" fill="url(#f)" stroke="url(#g)" stroke-width="1.4"/>
+  <path d="M22 43V21l20 22V21" fill="none" stroke="url(#g)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <div class="content">
+    <div class="kicker"><i></i>Software studio · Galle, Sri Lanka</div>
+    <div class="word">Nico Labs</div>
+    <div class="tag">Software that runs<br>your <span>business.</span></div>
+    <div class="chips"><span class="chip">Booking systems</span><span class="chip">Dashboards</span><span class="chip">Online stores</span><span class="chip">Websites</span></div>
+    <div class="foot"><b>Live in weeks</b><span class="dot"></span>Book a free 15‑min call</div>
+  </div>
+  <div class="edge"></div>
+</div></body></html>
